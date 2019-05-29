@@ -32,7 +32,7 @@ users.methods.comparePassword = function(password) {
     .then( valid => valid ? this : null);
 };
 
-users.statics.createFromOauth = function(email) {
+users.statics.pCreateFromOauth = function(email) {
 
   if(! email) { return Promise.reject('Validation Error'); }
 
@@ -45,7 +45,7 @@ users.statics.createFromOauth = function(email) {
     .catch( error => {
       console.log('Creating new user');
       let username = email;
-      let password = 'none';
+      let password = 'oauth';
       return this.create({username, password, email});
     });
 
