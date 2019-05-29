@@ -9,6 +9,9 @@
     "eslint": "^5.16.0",
     "jest": "^24.8.0"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "devDependencies": {
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
@@ -16,6 +19,7 @@
   },
   "scripts": {
     "start": "node index.js",
+    "watch": "nodemon index.js",
     "lint": "eslint '**/*.js'",
     "test": "jest --verbose --coverage",
     "test-watch": "jest --watchAll --verbose --coverage",
