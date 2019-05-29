@@ -9,6 +9,9 @@ data
 *.env
 package-lock.json
 
+# Webstorm
+.idea
+
 ### Vim ###
 # swap
 [._]*.s[a-w][a-z]

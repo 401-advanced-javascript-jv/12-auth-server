@@ -10,8 +10,7 @@
     "fail":true
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:prettier/recommended"
+    "eslint:recommended"
   ],
   "parserOptions": {
     "sourceType": "module",

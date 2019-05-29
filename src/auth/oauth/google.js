@@ -8,9 +8,8 @@ const GTS = 'https://www.googleapis.com/oauth2/v4/token';
 const SERVICE = 'https://www.googleapis.com/plus/v1/people/me/openIdConnect';
 
 let authorize = (request) => {
-  
   console.log('(1)', request.query.code);
-  
+
   return superagent.post(GTS)
     .type('form')
     .send({
@@ -40,7 +39,7 @@ let authorize = (request) => {
       return Users.createFromOauth(oauthUser.email);
     })
     .then( actualUser => {
-      return actualUser.generateToken(); 
+      return actualUser.generateToken();
     })
     .catch( error => error );
 };
