@@ -1,46 +1,32 @@
-# LAB - 
+# LAB - 12
 
-## Project Name
+## Authorization Server - Back-end
 
-### Author: Jesse Van Volkinburg
+### Author: Jesse Van Volkinburg && Bonnie Wang
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
-
-#### Documentation
-* [api docs](http://xyz.com) (API servers)
-* [jsdoc](http://xyz.com) (Server assignments)
-* [styleguide](http://xyz.com) (React assignments)
-
-### Modules
-#### `modulename.js`
-##### Exported Values and Methods
-
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
+* [submission PR](https://github.com/401-advanced-javascript-jv/12-auth-server/pull/1)
+* [travis](https://www.travis-ci.com/401-advanced-javascript-jv/12-auth-server)
+* [back-end](http://lab12auth.herokuapp.com/)
+* [front-end](http://lab-12-jb.herokuapp.com/)
 
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
+* `PORT` - Port Number - Note these CANNOT be the same for both front-end and back-end
 * `MONGODB_URI` - URL to the running mongo instance/db
+* `GITHUB_CLIENT_ID` - OAuth client ID from Github
+* `GITHUB_CLIENT_SECRET` - OAuth client secret from Github
+* `SECRET` - Secret for JWT crypto
 
 #### Running the app
+##### Back-End
 * `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
-  
-#### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* Endpoint: `/signup`
+  * Basic Auth sign-up with username:password
+* Endpoint: `/signin`
+  * Basic Auth sign-in with username:password
+* Endpoint: `/oauth/github`
+  * Github OAuth endpoint
 
 #### UML
-Link to an image of the UML for your application and response to events
+![UML Diagram](./assets/12-uml.jpg)
