@@ -35,7 +35,7 @@ describe('Auth Router', () => {
             id = token.id;
             encodedToken = results.text;
             expect(token.id).toBeDefined();
-            expect(token.capabilities).toBeDefined();
+            expect(token.role).toBeDefined();
           });
       });
 
@@ -45,7 +45,7 @@ describe('Auth Router', () => {
           .then(results => {
             var token = jwt.verify(results.text, process.env.SECRET || 'changeit');
             expect(token.id).toEqual(id);
-            expect(token.capabilities).toBeDefined();
+            expect(token.role).toBeDefined();
           });
       });
 
