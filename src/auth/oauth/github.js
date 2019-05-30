@@ -4,12 +4,10 @@ require('dotenv').config();
 const superagent = require('superagent');
 const Users = require('../users-model.js');
 
-// Jesse - API Should be set in the .env file and sourced here. More secure,
-// easier to maintain
-const API = 'http://lab12auth.herokuapp.com/oauth/github';
 const GITHUB_TOKEN_SERVER = 'https://github.com/login/oauth/access_token';
 // const GITHUB_PROFILE_SERVICE = 'https://api.github.com/user';
 const GITHUB_EMAIL_SERVICE = 'https://api.github.com/user/emails';
+const API = process.env.API_SERVER;
 const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
 const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 

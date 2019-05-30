@@ -16,6 +16,7 @@
 * `MONGODB_URI` - URL to the running mongo instance/db
 * `GITHUB_CLIENT_ID` - OAuth client ID from Github
 * `GITHUB_CLIENT_SECRET` - OAuth client secret from Github
+* `SECRET` - Secret for JWT crypto
 
 #### Running the app
 ##### Back-End
