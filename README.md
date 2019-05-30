@@ -7,8 +7,8 @@
 ### Links and Resources
 * [submission PR](http://xyz.com)
 * [travis](http://xyz.com)
-* [back-end](https://lab12auth.herokuapp.com/)
-* [front-end](https://lab-12-jb.herokuapp.com)
+* [back-end](http://lab12auth.herokuapp.com/)
+* [front-end](http://lab-12-jb.herokuapp.com/)
 
 #### Documentation
 * [api docs](http://xyz.com) (API servers)
