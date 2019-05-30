@@ -31,7 +31,7 @@ describe('Auth Router', () => {
         return mockRequest.post('/signup')
           .send(users[userType])
           .then(results => {
-            var token = jwt.verify(results.text, process.env.SECRET || 'changeit');
+            var token = jwt.verify(results.text, process.env.SECRET || 'BIBBLYbobblyBOO');
             id = token.id;
             encodedToken = results.text;
             expect(token.id).toBeDefined();
@@ -43,7 +43,7 @@ describe('Auth Router', () => {
         return mockRequest.post('/signin')
           .auth(users[userType].username, users[userType].password)
           .then(results => {
-            var token = jwt.verify(results.text, process.env.SECRET || 'changeit');
+            var token = jwt.verify(results.text, process.env.SECRET || 'BIBBLYbobblyBOO');
             expect(token.id).toEqual(id);
             expect(token.role).toBeDefined();
           });
